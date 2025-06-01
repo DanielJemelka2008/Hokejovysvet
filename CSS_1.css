@@ -1,0 +1,148 @@
+/* Základní styl pro tělo */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* Sidebar: pevný levý panel */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 100vh;
+  background-color: #4169E1; /* královská modrá */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar h1 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  color: #ffd700; 
+  text-decoration: underline;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  display: block;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.sidebar a:hover {
+  background-color: #5a82e6;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.sidebar a.active {
+  background-color: #2f52b5;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+/* Header a footer - stejné pozadí jako sidebar, odsazení obsahuje margin-left jako sidebar */
+header, footer {
+  background-color: #4169E1; /* královská modrá */
+  color: white;
+  padding: 20px 30px;
+  margin-left: 225px; /* odsazení od sidebaru */
+  box-sizing: border-box;
+}
+
+/* Text v headeru/footeru */
+header p, footer p {
+  margin: 0;
+}
+
+/* Hlavní obsah: odsazený, aby nebyl překryt sidebar */
+main {
+  margin-left: 225px; /* stejné jako šířka sidebaru */
+  padding: 30px;
+  background-color: #dcdcdc; /* světlounce šedé pozadí */
+  min-height: calc(100vh - 120px); /* výška minus header a footer */
+  box-sizing: border-box;
+}
+
+/* Nadpisy */
+h1, h2 {
+  color: #003399; /* královská modrá */
+}
+
+/* Sekce detailů s týmy */
+details {
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Nadpis rozbalovacích detailů */
+summary {
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Seznam týmů - bez odrážek */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+/* Položka seznamu jako flexbox pro logo + odkaz */
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+/* Odkazy na týmy */
+a {
+  text-decoration: none;
+  color: #003399;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #0055cc;
+}
+
+
+/* Přidáno: viditelné odrážky v seznamech uvnitř sekcí */
+section ul {
+  list-style-type: disc;
+  margin-left: 20px;  /* odsazení od levého okraje */
+  padding-left: 20px; /* odsazení uvnitř seznamu */
+  color: #222;
+  display: block; /* zajistí normální blokové chování, bez flex */
+}
+
+/* Upravíme, aby v těchto seznamech položky nebyly flex */
+section ul li {
+  display: list-item;
+  margin: 0.4em 0;
+}

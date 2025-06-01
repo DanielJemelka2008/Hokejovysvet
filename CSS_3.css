@@ -1,0 +1,100 @@
+/* Základní styl pro tělo */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* Sidebar: pevný levý panel */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 100vh;
+  background-color: #4169E1; /* královská modrá */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+  color: #ffd700; 
+  text-decoration: underline;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  display: block;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.sidebar a:hover {
+  background-color: #5a82e6;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.sidebar a.active {
+  background-color: #2f52b5;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+/* Hlavní obsah: odsazený, aby nebyl překryt sidebar */
+main {
+  margin-left: 225px; /* širší kvůli sidebaru */
+  padding: 30px;
+  background-color: #dcdcdc; /* světlounce šedé pozadí */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Nadpisy */
+h1, h2 {
+  color: #003399; /* královská modrá */
+}
+
+/* Styl pro legendy: obrázek napravo, text nalevo */
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.text {
+  max-width: 60%;
+  flex-grow: 1;
+}
+
+.legend img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 20px;
+}
